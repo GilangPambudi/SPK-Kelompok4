@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
       for (var i = 1; i < rows.length; i++) {
         var phoneData = {
           'No': rows[i].cells[0].innerText,
-          'Alternatif HP': rows[i].cells[1].innerText,
+          'Alternatif': rows[i].cells[1].innerText,
           'Memori': rows[i].cells[2].innerText,
           'Penyimpanan': rows[i].cells[3].innerText,
           'Kamera': rows[i].cells[4].innerText,
-          'Battery': rows[i].cells[5].innerText,
+          'Baterai': rows[i].cells[5].innerText,
           'Harga': rows[i].cells[6].innerText,
           'Bobot': rows[i].cells[7].innerText,
           'Pengisian Daya': rows[i].cells[8].innerText
@@ -31,17 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Membuat tabel hasil
       var resultTable = "<h3>Selected Phones (sorted by price):</h3><table class='table table-bordered'>";
-      resultTable += "<tr><td>Ranking</td><td>No</td><td>Alternatif HP</td><td>Memori</td><td>Penyimpanan</td><td>Kamera</td><td>Battery</td><td>Harga</td><td>Bobot</td><td>Pengisian Daya</td></tr>";
+      resultTable += "<tr><td>Ranking</td><td>No</td><td>Alternatif</td><td>Memori</td><td>Penyimpanan</td><td>Kamera</td><td>Baterai</td><td>Harga</td><td>Bobot</td><td>Pengisian Daya</td></tr>";
   
       selectedPhones.forEach(function(phone) {
         resultTable += "<tr>";
         resultTable += "<td>" + phone.Ranking + "</td>";
         resultTable += "<td>" + phone.No + "</td>";
-        resultTable += "<td>" + phone['Alternatif HP'] + "</td>";
+        resultTable += "<td>" + phone['Alternatif'] + "</td>";
         resultTable += "<td>" + phone.Memori + "</td>";
         resultTable += "<td>" + phone.Penyimpanan + "</td>";
         resultTable += "<td>" + phone.Kamera + "</td>";
-        resultTable += "<td>" + phone.Battery + "</td>";
+        resultTable += "<td>" + phone.Baterai + "</td>";
         resultTable += "<td>" + phone.Harga + "</td>";
         resultTable += "<td>" + phone.Bobot + "</td>";
         resultTable += "<td>" + phone['Pengisian Daya'] + "</td>";
