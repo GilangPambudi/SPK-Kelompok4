@@ -105,42 +105,7 @@ function normalizeMatrix(matrix, divisors) {
 var divisors = calculateDivisors(dataMatrix);
 var normalizedMatrix = normalizeMatrix(dataMatrix, divisors)
 
-
-/*function displayNormalizedMatrixTable(matrix) {
-  var resultTable = document.getElementById('resultTable');
-
-  // Membuat tabel untuk matriks ternormalisasi
-  var table = document.createElement('table');
-  table.classList.add('table', 'table-bordered');
-
-  // Menambahkan judul tabel
-  var caption = document.createElement('caption');
-  caption.textContent = 'Normalized Matrix';
-  table.appendChild(caption);
-
-  // Menambahkan header tabel
-  var headerRow = table.insertRow();
-  headerRow.insertCell(0).textContent = 'Alternatif';
-  for (var i = 0; i < matrix[0].length; i++) {
-    headerRow.insertCell(i + 1).textContent = 'C' + (i + 1);
-  }
-
-  // Menambahkan data tabel
-  for (var i = 0; i < matrix.length; i++) {
-    var row = table.insertRow();
-    row.insertCell(0).textContent = alternativeNames[i];
-
-    for (var j = 0; j < matrix[i].length; j++) {
-      row.insertCell(j + 1).textContent = matrix[i][j].toFixed(3); // Menampilkan hingga 3 desimal
-    }
-  }
-
-  // Mengganti konten dari elemen resultTable dengan tabel baru
-  resultTable.innerHTML = '';
-  resultTable.appendChild(table);
-}
-
-Test matriks ternormalisasi*/
+//Test matriks ternormalisasi
 console.log("Matriks ternormalisasi", normalizedMatrix);
 
 
@@ -169,6 +134,8 @@ var weightedMatrix = calculateWeightedNormalizedMatrix(normalizedMatrix, weights
 
 //Test matriks ternormalisasi terbobot
 console.log("Weighted Normalized Matrix (Y):", weightedMatrix);
+
+var benefitCriteria = ['cost', 'benefit', 'benefit', 'benefit', 'benefit', 'cost', 'benefit'];
 
 // Fungsi untuk menentukan solusi ideal positif (A+)
 function calculatePositiveIdealSolution(weightedMatrix, benefitCriteria) {
@@ -221,7 +188,6 @@ function calculateNegativeIdealSolution(weightedMatrix, benefitCriteria) {
 }
 
 // Contoh penggunaan fungsi
-var benefitCriteria = ['cost', 'benefit', 'benefit', 'benefit', 'benefit', 'cost', 'benefit'];
 var positiveIdealSolution = calculatePositiveIdealSolution(weightedMatrix, benefitCriteria);
 var negativeIdealSolution = calculateNegativeIdealSolution(weightedMatrix, benefitCriteria);
 
